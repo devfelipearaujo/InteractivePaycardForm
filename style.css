@@ -1,0 +1,30 @@
+/* - Mobile: 375px
+- Desktop: 1440px */
+@import url(./assets/css/main.css);
+
+:root {
+    /* Cores */
+    --branco: hsl(0, 0%, 100%);
+    --cinza-claro: hsl(270, 3%, 87%);
+    --cinza-violeta-claro: hsl(279, 6%, 55%);
+    --cinza-violeta-escuro: hsl(278, 68%, 11%);
+    --activeInput-border: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+    --inputErrors-border: hsl(0, 100%, 66%);
+
+    /* Font-Families */
+    --ff-main: 'Space Grotesk', sans-serif;
+
+    /* Font-Sizes */
+    --fs-pequeno: 16px;
+    --fs-regular: 18px;
+    --fs-grande: 20px;
+
+    /* Font-Weights */
+    --fw-regular: 400;
+    --fw-medium: 500;
+}
+
+/* body {
+    height: 100vh;
+    background-color: var(--branco);
+} */
