@@ -4,7 +4,7 @@
 }
 
 .cards {
-    height: 30vh;
+    height: 28vh;
     background: url(../images/bg-main-mobile.png);
     text-align: right;
     padding: 2rem 1rem;
@@ -21,6 +21,81 @@
     left: 1rem;
 }
 
-.input {
-    padding: 5rem 1rem;
+.cards__imagem-frente-container {
+}
+
+.circulos__container {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: calc(50% + 1rem);
+    left: 2rem;
+    gap: .6rem;
+}
+
+.circulo {
+    height: 29px;
+    width: 29px;
+    border-radius: 50%;
+    background-color: var(--branco);
+}
+
+.circulo-pequeno {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid var(--branco);
+}
+
+.form {
+    padding: 5rem 1.5rem;
+}
+
+.label {
+    font-size: var(--fs-mobile) ;
+    color: var(--cinza-violeta-escuro);
+    font-weight: var(--fw-semi-bold) ;
+    font-family: var(--ff-main);
+    padding: .5rem 0;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.form__container {
+    display: flex;
+    flex-direction: column;
+}
+
+.form__input {
+    padding: .85rem;
+    border-radius: 10px;
+    border: 1px solid var(--cinza-claro);
+    margin-bottom: 1rem;
+}
+
+.form__input::placeholder {
+    font-size: var(--fs-pequeno);
+    font-weight: var(--fw-medium);
+    font-family: var(--ff-main);
+    color: var(--cinza);
+}
+
+.form__grupo {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.form__grupo-coluna {
+    width: 50%;
+}
+
+.expDate__container {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.expDate-input {
+    width: 50%;
 }
