@@ -16,6 +16,7 @@
     --ff-main: 'Space Grotesk', sans-serif;
 
     /* Font-Sizes */
+    --fs-mobile-pequeno: 10px;
     --fs-mobile: 12px;
     --fs-pequeno: 16px;
     --fs-regular: 18px;

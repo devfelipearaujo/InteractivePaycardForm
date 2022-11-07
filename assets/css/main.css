@@ -48,6 +48,40 @@
     border: 1px solid var(--branco);
 }
 
+.dados__container {
+    width: 235px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: absolute;
+    align-items: center;
+    top: 90%;
+    left: 2rem;
+    color: var(--branco);
+    font-family: var(--ff-main);
+}
+
+.span__cardNumber {
+    font-size: var(--fs-regular);
+    letter-spacing: 1.5px;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.dados__container-grupo {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.span__cardName, .span__cardExpiration {
+    font-size: var(--fs-mobile-pequeno);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: var(--fw-regular);
+}
+
 .form {
     padding: 5rem 1.5rem;
 }
