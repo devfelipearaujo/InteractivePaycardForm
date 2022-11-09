@@ -1,41 +1,40 @@
 .container {
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .cards {
-    height: 28vh;
+    height: 31vh;
     position: relative;
-    background: url(../images/bg-main-mobile.png);
+    background: url(../images/bg-main-mobile.png) center / cover no-repeat;
     text-align: right;
     padding: 2rem 0;
 }
 
 .cards__imagem {
-    width: 277px;
+    height: 157px;
+    width: 286px;
 }
 
-.cards__imagem-frente {
+.imagemFrente__container {
+    background: url(../images/bg-card-front.png) center / contain no-repeat;
     position: absolute;
-    top: 52.5%;
+    top: 50%;
     left: calc(50% - 170px);
+    box-sizing: border-box;
+    padding: 1rem 1.4rem;
 }
 
 .cards__imagem-costas {
+    background: url(../images/bg-card-back.png) center / contain no-repeat;
     position: absolute;
-    /* top: 3%; */
     right: calc(50% - 170px);
-}
-
-.cards__imagem-frente-container {
 }
 
 .circulos__container {
     display: flex;
     align-items: center;
-    position: absolute;
-    top: calc(50% + 1rem);
-    left: calc(50% - 170px + 1rem);
     gap: .6rem;
 }
 
@@ -55,21 +54,27 @@
 }
 
 .dados__container {
-    width: 235px;
+    width: 100%;
+    margin-top: 22%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    position: absolute;
     align-items: center;
-    top: 90%;
-    left: calc(50% - 170px + 1rem);
-    color: var(--branco);
     font-family: var(--ff-main);
+    color: var(--branco)
+}
+
+.span__cvc {
+    width: 100%;
+    display: block;
+    transform: translate(-33px, 73px);
+    font-family: var(--ff-main);
+    color: var(--branco);
 }
 
 .span__cardNumber {
     font-size: var(--fs-regular);
-    letter-spacing: 1.5px;
+    letter-spacing: 1.9px;
     width: 100%;
     text-align: left;
     margin-bottom: 1rem;
@@ -77,12 +82,13 @@
 
 .dados__container-grupo {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     width: 100%;
     gap: 5px;
 }
 
-.span__cardName, .span__cardExpiration {
+.span__cardName, .span__cardExpiration, .span__cvc {
     font-size: var(--fs-mobile-pequeno);
     letter-spacing: 1.5px;
     text-transform: uppercase;
@@ -121,6 +127,12 @@
     border-radius: 10px;
     border: 1px solid var(--cinza-claro);
     margin-bottom: 1rem;
+    font-size: var(--fs-pequeno);
+    font-weight: var(--fw-medium);
+}
+
+.form__input:focus {
+    outline: none;
 }
 
 .form__input::placeholder {
@@ -149,6 +161,7 @@
     background-color: var(--cinza-violeta-escuro);
     color: var(--branco);
     font-size: var(--fs-pequeno);
+    font-weight: var(--fw-medium);
     letter-spacing: 1px;
 }
 
@@ -159,4 +172,74 @@
 
 .expDate-input {
     width: 50%;
+}
+
+@media screen and (min-width: 1000px) {
+    .container {
+        flex-direction: row;
+        align-items: center;
+        gap: 3.5rem;
+    }
+
+    .cards {
+        height: 100vh;
+        padding: 0;
+        width: 50%;
+        background: url(../images/bg-main-desktop.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-size: 65% 100vh;
+    }
+
+    .imagemFrente__container {
+        top: 21%;
+    }
+    
+    .cards__imagem-costas {
+        top: 55%;
+        right: 5%;
+    }
+
+    .cards__imagem {
+        height: 188px;
+        width: 343px;
+    }
+
+    .span__cvc {
+        transform: translate(-38px, 88px);
+    }
+
+    .span__cardNumber {
+        font-size: var(--fs-grande);
+    }
+
+    .span__cardName, .span__cardExpiration, .span__cvc {
+        font-size: var(--fs-mobile);
+    }
+
+
+    .form {
+        width: 30%;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .cards__imagem {
+        height: 245px;
+        width: 447px;
+    }
+
+    .circulo {
+        height: 47px;
+        width: 47px;
+    }
+    
+    .circulo-pequeno {
+        width: 20px;
+        height: 20px;
+    }
+
+    .span__cvc {
+        transform: translate(-50px, 115px);
+    }
 }
