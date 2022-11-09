@@ -5,10 +5,10 @@
 
 .cards {
     height: 28vh;
+    position: relative;
     background: url(../images/bg-main-mobile.png);
     text-align: right;
-    padding: 2rem 1rem;
-    position: relative;
+    padding: 2rem 0;
 }
 
 .cards__imagem {
@@ -17,8 +17,14 @@
 
 .cards__imagem-frente {
     position: absolute;
-    top: 50%;
-    left: 1rem;
+    top: 52.5%;
+    left: calc(50% - 170px);
+}
+
+.cards__imagem-costas {
+    position: absolute;
+    /* top: 3%; */
+    right: calc(50% - 170px);
 }
 
 .cards__imagem-frente-container {
@@ -29,7 +35,7 @@
     align-items: center;
     position: absolute;
     top: calc(50% + 1rem);
-    left: 2rem;
+    left: calc(50% - 170px + 1rem);
     gap: .6rem;
 }
 
@@ -56,7 +62,7 @@
     position: absolute;
     align-items: center;
     top: 90%;
-    left: 2rem;
+    left: calc(50% - 170px + 1rem);
     color: var(--branco);
     font-family: var(--ff-main);
 }
@@ -73,6 +79,7 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
+    gap: 5px;
 }
 
 .span__cardName, .span__cardExpiration {
@@ -80,6 +87,14 @@
     letter-spacing: 1.5px;
     text-transform: uppercase;
     font-weight: var(--fw-regular);
+}
+
+.span__cardName {
+    text-align: left;
+}
+
+.span__cardExpiration {
+    display: flex;
 }
 
 .form {
@@ -123,6 +138,18 @@
 
 .form__grupo-coluna {
     width: 50%;
+}
+
+.form__submit {
+    margin-top: .5rem;
+    width: 100%;
+    padding: .9rem 0;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--cinza-violeta-escuro);
+    color: var(--branco);
+    font-size: var(--fs-pequeno);
+    letter-spacing: 1px;
 }
 
 .expDate__container {
