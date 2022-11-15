@@ -1,6 +1,8 @@
 /* - Mobile: 375px
 - Desktop: 1440px */
 @import url(./assets/css/main.css);
+@import url(./assets/css/form.css);
+@import url(./assets/css/responsive.css);
 
 :root {
     /* Cores */
@@ -9,7 +11,7 @@
     --cinza:hsl(264, 4%, 77%);
     --cinza-violeta-claro: hsl(279, 6%, 55%);
     --cinza-violeta-escuro: hsl(278, 68%, 11%);
-    --activeInput-border: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+    --activeInput-border:  hsl(278, 94%, 30%);
     --inputErrors-border: hsl(0, 100%, 66%);
 
     /* Font-Families */
@@ -28,7 +30,6 @@
     --fw-semi-bold: 600;
 }
 
-/* body {
-    height: 100vh;
-    background-color: var(--branco);
-} */
+body {
+    font-family: var(--ff-main);
+}

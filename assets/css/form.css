@@ -1,0 +1,129 @@
+.form {
+   padding: 5rem 1.5rem;
+}
+
+.form-concluido {
+   display: none;
+}
+
+.label {
+   font-size: var(--fs-mobile) ;
+   font-weight: var(--fw-semi-bold);
+   color: var(--cinza-violeta-escuro);
+   padding: .5rem 0;
+   letter-spacing: 1.5px;
+   text-transform: uppercase;
+}
+
+.form__container {
+   display: flex;
+   flex-direction: column;
+   margin-bottom: 1rem;
+}
+
+.form__input {
+   font-size: var(--fs-pequeno);
+   font-weight: var(--fw-medium);
+   padding: .85rem;
+   border-radius: 10px;
+   border: 1px solid var(--cinza-claro);
+}
+
+.form__input:focus {
+   outline: none;
+   border-color: hsl(278, 94%, 30%);
+}
+
+.form__input::placeholder {
+   font-size: var(--fs-pequeno);
+   font-weight: var(--fw-medium);
+   font-family: var(--ff-main);
+   color: var(--cinza);
+}
+
+.form__grupo {
+   display: flex;
+   gap: 0.5rem;
+   align-items: flex-start;
+}
+
+.form__grupo-coluna {
+   width: 50%;
+}
+
+.form__submit {
+   font-size: var(--fs-pequeno);
+   font-weight: var(--fw-medium);
+   color: var(--branco);
+   background-color: var(--cinza-violeta-escuro);
+   margin-top: .5rem;
+   width: 100%;
+   padding: .9rem 0;
+   border-radius: 5px;
+   border: none;
+   letter-spacing: 1px;
+}
+
+.form__submit:hover {
+   cursor: pointer;
+}
+
+.expDate__container {
+   display: flex;
+   gap: 0.5rem;
+}
+
+.expDate-input {
+   width: 50%;
+}
+
+.form-concluido {
+   display: none;
+   flex-direction: column;
+   align-items: center;
+}
+
+.form-concluido__titulo {
+   font-size: var(--fs-grande);
+   font-weight: var(--fw-semi-bold);
+   color: var(--cinza-violeta-escuro);
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   margin: 2rem 0 1.5rem 0;
+}
+
+.form-concluido__descricao {
+   font-size: var(--fs-regular);
+   font-weight: var(--fw-medium);
+   color: var(--cinza-violeta-claro);
+}
+
+.form__icone {
+   display: block;
+   height: 79px;
+   width: 79px;
+   background: url(../images/icon-complete.svg) center / contain no-repeat;
+}
+
+.form__submit-continue {
+   margin-top: 3rem;
+}
+
+.erro {
+   border-color: var(--inputErrors-border);
+}
+
+.erro__message::after {
+   content: "Wrong format, letters only";  
+   font-size: var(--fs-mobile);
+   color: var(--inputErrors-border);
+   margin-top: .2rem;
+}
+
+.erro__message-blank::after {
+   content: "Can't be blank";
+}
+
+.erro__message-number::after {
+   content: "Insert all the 16 cardnumbers";
+}

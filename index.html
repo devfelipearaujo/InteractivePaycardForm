@@ -1,74 +1,87 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Interactive card details form</title>
-  <link rel="stylesheet" href="./assets/css/reset.css">
-  <link rel="stylesheet" href="./style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Interactive card details form</title>
+   <link rel="stylesheet" href="./assets/css/reset.css">
+   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+   <link rel="stylesheet" href="./style.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
 <main>
-  <div class="container">
-    <section class="cards">
-		<div class="cards__imagem cards__imagem-costas">
-			<span class="span__cvc">000</span>
-		</div>
+   <div class="container">
+      <section class="cards">
+         <div class="cards__imagem cards__imagem-costas">
+            <span class="span__cvc">000</span>
+         </div>
 
-    <div class="cards__imagem imagemFrente__container">
-		<div class="circulos__container">
-			<span class="circulo"></span>
-			<span class="circulo-pequeno"></span>
-		</div>
-		<div class="dados__container">
-			<span class="span__cardNumber">0000  0000  0000  0000</span>
-			<div class="dados__container-grupo">
-				<span class="span__cardName">Jane Appleseed</span>
-				<span class="span__cardExpiration">
-					<span data-expMonthSpan>00</span>
-					/
-					<span data-expYearSpan>00</span>
-				</span>
-			</div>
-		</div>
-    </div>
-	</section>
-
-    <section class="form">
-      <form>
-        <div class="form__container">
-          <label class="label" for="name">cardholder name</label>
-          <input class="form__input" data-cardName type="text" name="" id="name" placeholder="e.g. Jane Appleseed" required>
-        </div>
-
-        <div class="form__container">
-          <label class="label" for="name">card number</label>
-          <input class="form__input" data-cardNumber type="number" 
-          oninput="this.value=this.value.slice(0,this.maxLength)" maxlength="16" name="cardNumber" id="name" placeholder="e.g. 1234-5678-9123-0000"  required>    
-        </div>
-
-        <div class="form__grupo">     
-          <div class=".form__container form__grupo-coluna">
-            <label class="label" for="data">exp. date (mm/yy)</label>
-            <div class="expDate__container">
-              <input class="form__input expDate-input" data-cardMonth type="number" name="mês" id="data" placeholder="MM" oninput="this.value=this.value.slice(0,this.maxLength)" maxlength="2" required>
-              <input class="form__input expDate-input" data-cardYear type="number" name="ano" id="data" placeholder="YY" oninput="this.value=this.value.slice(0,this.maxLength)" maxlength="2" required>
+      <div class="cards__imagem imagemFrente__container">
+         <div class="circulos__container">
+            <span class="circulo"></span>
+            <span class="circulo-pequeno"></span>
+         </div>
+         <div class="dados__container">
+            <span class="span__cardNumber">0000  0000  0000  0000</span>
+            <div class="dados__container-grupo">
+               <span class="span__cardName">Jane Appleseed</span>
+               <span class="span__cardExpiration">
+                  <span data-expMonthSpan>00</span>
+                  /
+                  <span data-expYearSpan>00</span>
+               </span>
             </div>
-          </div>
+         </div>
+      </div>
+      </section>
 
-          <div class="form__container form__grupo-coluna">
-            <label class="label" for="cvc">cvc</label>
-            <input class="form__input" data-cardCvc type="number" name="cvc" id="cvc" placeholder="e.g. 123" oninput="this.value=this.value.slice(0,this.maxLength)" maxlength="3" required>
-          </div>
-        </div>
-          <input class="form__submit" type="submit" value="Confirm">
-      </form>
-    </section>
-</div>
+      <section class="form">
+         <div class="form-pendente">
+         <form>
+            <div class="form__container">
+               <label class="label" for="name">cardholder name</label>
+               <input class="form__input" data-cardName type="text" name="Card holder name" id="name" placeholder="e.g. Jane Appleseed" required>
+            </div>
+
+            <div class="form__container">
+               <label class="label" for="number">card number</label>
+               <input class="form__input" data-cardNumber type="number" 
+               oninput="this.value=this.value.slice(0,this.maxLength)" maxlength="16" name="Card number" id="number" placeholder="e.g. 1234-5678-9123-0000"  required>    
+            </div>
+                           
+            <div class="form__grupo">     
+               <div class="form__container form__grupo-coluna">
+               <label class="label" for="data">exp. date (mm/yy)</label>
+               <div class="expDate__container">
+                  <div>
+                     <input class="form__input expDate-input" data-cardMonth type="number" name="mês" id="data" placeholder="MM" oninput="this.value=this.value.slice(0,this.maxLength)" maxlength="2" required>
+                  </div>
+                  <div>
+                     <input class="form__input expDate-input" data-cardYear type="number" name="ano" id="data" placeholder="YY" oninput="this.value=this.value.slice(0,this.maxLength)" maxlength="2" required>
+                  </div>
+               </div>
+               </div>
+
+               <div class="form__container form__grupo-coluna">
+               <label class="label" for="cvc">cvc</label>
+               <input class="form__input" data-cardCvc type="number" name="cvc" id="cvc" placeholder="e.g. 123" oninput="this.value=this.value.slice(0,this.maxLength)" maxlength="3" required>
+               </div>
+            </div>
+               <input class="form__submit" type="submit" value="Confirm">
+         </form>
+         </div>
+         <div class="form-concluido">
+         <span class="form__icone"></span>
+         <p class="form-concluido__titulo">thank you!</p>
+         <p class="form-concluido__descricao">We've added your card details</p>
+         <button class="form__submit form__submit-continue" type="submit">Continue</button>
+         </div>
+      </section>
+   </div>
 </main>
 
 <script src="./main.js"></script>
